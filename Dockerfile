@@ -1,5 +1,5 @@
-#python:3.7.6
-FROM python:3.7.6
+#python:3.7.7
+FROM python:3.7.7
 
 # Install any needed packages specified in requirements.txt
 RUN apt-get update && \
