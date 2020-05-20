@@ -7,8 +7,7 @@ RUN apt-get update && \
     net-tools git bzip2 cmake \
     bc bison flex util-linux dosfstools e2fsprogs \
     wget make git gdb libusb-dev libusb-1.0 \
-    libtool autotools-dev  automake pkg-config usbutils scons \
-    && rm -rf /var/lib/apt/lists/*
+    libtool autotools-dev  automake pkg-config usbutils scons
 
 RUN git clone git://git.code.sf.net/p/openocd/code openocd-code &&\
     cd openocd-code && \
