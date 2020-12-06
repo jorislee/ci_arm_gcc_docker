@@ -4,7 +4,7 @@ FROM ubuntu:18.04
 RUN apt-get update && \
     apt-get install -yq \
     ccache libncurses5-dev libssl-dev \
-    net-tools git bzip2 cmake \
+    net-tools git bzip2 cmake minicom \
     bc bison flex util-linux dosfstools e2fsprogs \
     wget make git gdb libusb-dev libusb-1.0 \
     libtool autotools-dev  automake pkg-config usbutils scons
