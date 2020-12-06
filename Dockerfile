@@ -7,6 +7,7 @@ RUN apt-get update && \
     git \
     bzip2 \
     cmake \
+    minicom \
     wget && \
     apt-get clean
 
