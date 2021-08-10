@@ -20,8 +20,9 @@ RUN git clone git://git.code.sf.net/p/openocd/code openocd-code &&\
 RUN apt-get install gdb-multiarch && rm -rf /var/lib/apt/lists/*
 
 # Download and configure the toolchain
-RUN cd /opt/ && wget -qO- https://developer.arm.com/-/media/Files/downloads/gnu-rm/9-2019q4/gcc-arm-none-eabi-9-2019-q4-major-x86_64-linux.tar.bz2 | tar -xj && cd -
+RUN cd /opt/ && wget -qO- https://developer.arm.com/-/media/Files/downloads/gnu-rm/10.3-2021.07/gcc-arm-none-eabi-10.3-2021.07-x86_64-linux.tar.bz2 | tar -xj && cd -
 
-ENV PATH "/opt/gcc-arm-none-eabi-9-2019-q4-major/bin:$PATH"
+
+ENV PATH "/opt/gcc-arm-none-eabi-10.3-2021.07/bin:$PATH"
 
 CMD [ "/bin/bash" ]
