@@ -1,5 +1,8 @@
 FROM ubuntu:20.04
 
+ARG DEBIAN_FRONTEND=noninteractive
+ENV TZ=Asia/Hong_Kong
+
 # Install any needed packages specified in requirements.txt
 RUN apt-get update && \
     apt-get install -yq \
@@ -7,7 +10,7 @@ RUN apt-get update && \
     net-tools git bzip2 cmake minicom \
     bc bison flex util-linux dosfstools e2fsprogs \
     wget make git gdb libusb-dev libusb-1.0 \
-    libtool autotools-dev python3 automake pkg-config usbutils scons
+    libtool autotools-dev python3 python-is-python3 automake pkg-config usbutils scons
 
 RUN git clone git://git.code.sf.net/p/openocd/code openocd-code &&\
     cd openocd-code && \
