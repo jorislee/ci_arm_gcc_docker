@@ -9,8 +9,11 @@ on:
   schedule:
     - cron: '30 21 * * *'
   push:
-    branches: [ master ]
-    branches: [ ubuntu ]
+    branches:    
+      # Push events on master branch
+      - master
+      # Push events on ubuntu branch
+      - ubuntu
     # Publish semver tags as releases.
     tags: [ 'v*.*.*' ]
 
