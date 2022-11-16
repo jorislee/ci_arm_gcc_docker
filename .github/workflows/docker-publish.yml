@@ -50,9 +50,3 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-      - name: Upload to release
-        uses: JasonEtco/upload-to-release@master
-        with:
-          args: /opt/gcc-arm-none-eabi-10.3-2021.07-x86_64-linux.tar.bz2
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
